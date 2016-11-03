@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}注册土木{% endblock %}
+
+{% block page_content %}
+      <p class="text-right" style="color:SteelBlue;">完成进度</p>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar"
+             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+             style="width: 90%;">
+            <span class="sr-only">90% 完成</span>
+        </div>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='专业知识/2014/上午/问题/14C_01.jpg') }}" class="img-thumbnail">
+    </div>
+    <div class="container">
+        <div class="pull-right">
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios1" value="option1">A
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="option2">B
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option3">C
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option4">D
+            </label>
+                <button type="button" class="btn btn-link">提交答案</button>
+        </div>
+
+    </div>
+
+    <ul class="pager">
+        <li class="previous"><a href="#">&larr; 上题</a></li>
+        <button type="button" class="btn btn-link" data-toggle="collapse"
+                data-target="#demo">
+            >>查看解析<<
+        </button>
+        <li class="next"><a href="#">下题 &rarr;</a></li>
+    </ul>
+
+    <div id="demo" class="collapse">
+        <img src="{{ url_for('static', filename='专业知识/2014/上午/答案/14C_01.jpg') }}" class="img-thumbnail">
+    </div>
+{% endblock %}

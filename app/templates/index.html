@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block title %}注册土木{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>您好, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}再来哦{% endif %}!</h1>
+</div>
+
+
+{#<div>#}
+{#    {% if current_user.is_authenticated %}#}
+{#    {{ wtf.quick_form(form) }}#}
+{#	{% else %}#}
+{#	<h1>积分不够，只能看评论哦!</h1>#}
+{#    {% endif %}#}
+{#</div>#}
+
+{#{% include '_posts.html' %}#}
+{#{% if pagination %}#}
+{#<div class="pagination">#}
+{#    {{ macros.pagination_widget(pagination, '.index') }}#}
+{#</div>#}
+{#{% endif %}#}
+
+{% endblock %}
